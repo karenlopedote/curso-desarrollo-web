@@ -1,0 +1,282 @@
+
+img.img-fluid {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  display: block;
+}          
+main {
+  flex: 1;
+}
+
+  body {
+  font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  background-color: #000;
+
+}
+
+header {
+  background-color:#B5A078;
+  color:#f1eded;
+  border-bottom: 1px solid ;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  flex-wrap: wrap;
+}
+
+.navbar-brand {
+  font-size:xx-large;
+  font-weight: bold;
+  text-decoration: none;
+  color:#f1eded;
+}
+
+ul.navbar-nav {
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+}
+
+ul.navbar-nav li a {
+  text-decoration: none;
+  color:#f1eded;
+  padding: 0.5rem 1rem;
+}
+
+ul.navbar-nav li a:hover,
+ul.navbar-nav li a.active {
+  background-color:#a46d46;
+  border-radius: 5px;
+}
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #B5A078;
+  color: #512302;
+  padding: 1.2rem 2rem;
+  font-size: 0.9rem;
+}
+
+
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    align-items:flex-start;
+  }
+
+  ul.navbar-nav {
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-top: 1rem;
+  }
+    }
+
+.about-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content:center;
+  align-items: center;
+  gap: 5rem;
+  padding: 2rem;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.about-text {
+  flex: 1 1 400px;
+  justify-content: center;
+  color: #fff;
+}
+
+.about-image {
+  flex: 1 1 100px;
+  display: flex;
+  justify-content: center;
+}
+
+  .certificates-section {
+  background-color: #000;
+  color: #fff;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.certificates-title {
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+}
+
+.certificates-grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.certificate-card {
+  background-color: #111;
+  padding: 2rem;
+  border-radius: 10px;
+  flex-basis: 350px;
+}
+
+.certificate-card h2 {
+  color: #fff;
+  margin-bottom: 1rem;
+}
+
+.certificate-card p {
+  color: #ddd;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.contact-section {
+  background-color: #000;
+  color: #fff;
+  padding: 4rem 2rem;
+  flex: 1;
+}
+
+.contact-container {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: start;
+}
+
+.contact-info h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #fff;
+}
+
+.contact-info p, 
+.contact-info a {
+  font-size: 1rem;
+  color: #ccc;
+  line-height: 1.6;
+  text-decoration: none;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.form-group {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.form-group.full {
+  flex-direction: column;
+}
+
+.contact-form input,
+.contact-form textarea {
+  flex: 1;
+  padding: 0.75rem 1rem;
+  border: 1px solid #666;
+  background-color: #111;
+  color: #fff;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: #999;
+}
+
+.contact-form button {
+  align-self: flex-end;
+  padding: 0.75rem 2rem;
+  border: none;
+  background-color: #B5A078;
+  color: #000;
+  font-weight: bold;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.contact-form button:hover {
+  background-color: #a46d46;
+}
+
+@media (max-width: 768px) {
+  .contact-container {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-form button {
+    align-self: center;
+    width: 100%;
+  }
+
+}
+.projects-section {
+  background-color: #000;
+  color: #fff;
+  padding: 4rem 2rem;
+  flex: 1;
+}
+
+.projects-title {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+.projects-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+@media (min-width: 600px) {
+  .projects-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 900px) {
+  .projects-grid {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+.project-card {
+  background-color: #111;
+  border-radius: 10px;
+  overflow: hidden;
+  text-align: center;
+}
+
+.project-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
