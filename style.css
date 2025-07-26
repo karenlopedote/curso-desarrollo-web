@@ -203,10 +203,6 @@ footer {
   font-size: 1rem;
 }
 
-.contact-form input::placeholder,
-.contact-form textarea::placeholder {
-  color: #999;
-}
 
 .contact-form button {
   align-self: flex-end;
@@ -216,8 +212,7 @@ footer {
   color: #000;
   font-weight: bold;
   font-size: 1rem;
-  border-radius: 5px;
-  cursor: pointer;
+  border-radius: 5px;;
 }
 
 .contact-form button:hover {
