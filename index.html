@@ -4,28 +4,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
-        <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-       <nav>
-      <a class="navbar-brand" href="#">KL</a>
-      <ul class="navbar-nav">
-        <li><a class="active" href="index.html">Home</a></li>
-        <li><a href="Pages/about.html">About</a></li>
-        <li><a href="Pages/certificates.html">Certificates</a></li>
-        <li><a href="Pages/proyects.html">Proyects</a></li>
-        <li><a href="Pages/contact.html">Contact</a></li>
-      </ul>
-    </nav>
+        <nav>
+            <a class="navbar-brand" href="#">KL</a>
+            <ul class="navbar-nav">
+                <li><a class="active" href="index.html">Home</a></li>
+                <li><a href="Pages/about.html">About</a></li>
+                <li><a href="Pages/certificates.html">Certificates</a></li>
+                <li><a href="Pages/proyects.html">Proyects</a></li>
+                <li><a href="Pages/contact.html">Contact</a></li>
+            </ul>
+        </nav>
     </header>
+
     <main>
         <article>
-        <img src="imagenes/grupo-de-diversos-disenadores-teniendo-una-discusion.jpg" alt="imagen de presentacion"class="img-fluid"></article>
+            <h2 class="intro-title">
+                <span id="typed-output"></span>
+            </h2>
+            <img src="imagenes/grupo-de-diversos-disenadores-teniendo-una-discusion.jpg" alt="Equipo de diseñadores colaborando" class="img-fluid">
+        </article>
     </main>
-<footer>
-    <div>© 2025 Karen Lopedote</div>
-    <div>Política de privacidad</div>
-  </footer>   
-  </body>
+
+    <footer>
+        <div>© 2025 Karen Lopedote</div>
+        <div>Política de privacidad</div>
+    </footer> 
+
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <script>
+      var typed = new Typed('#typed-output', {
+        strings: ['Diseñadora UX UI', 'Creativa', 'Apasionada'],
+        typeSpeed: 70,
+        backSpeed: 40,
+        loop: true
+      });
+    </script>
+</body>
 </html>

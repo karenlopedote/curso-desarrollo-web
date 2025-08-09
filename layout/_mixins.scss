@@ -1,0 +1,27 @@
+@mixin responsive($breakpoint) {
+  @if $breakpoint == phone {
+    @media (max-width: 768px) { @content; }
+  }
+  @if $breakpoint == tablet {
+    @media (min-width: 600px) { @content; }
+  }
+  @if $breakpoint == desktop {
+    @media (min-width: 900px) { @content; }
+  }
+}
+
+@mixin themed-button($bg-color, $text-color, $hover-bg-color) {
+  padding: 0.75rem 2rem;
+  border: none;
+  font-weight: bold;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: $bg-color;
+  color: $text-color;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: $hover-bg-color;
+  }
+}
