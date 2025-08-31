@@ -3,50 +3,84 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>contact</title>   
-        <link rel="stylesheet" href="../style.css">
+    <title>Contact</title> 
+    <meta name="description" content="Ponte en contacto con Karen Lopedote. Utiliza el formulario para enviarme un mensaje, o contáctame directamente por email o teléfono para consultas y proyectos.">
+    <meta name="keywords" content="contacto, Karen Lopedote, contactar diseñadora UX, formulario de contacto, consultas, proyectos, colaboración, email">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
 </head>
 <body>
     <header>
-   <nav>
-      <a class="navbar-brand" href="#">KL</a>
-      <ul class="navbar-nav">
-        <li><a href="../index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="certificates.html">Certificates</a></li>
-        <li><a href="proyects.html">Proyects</a></li>
-        <li><a class="active" href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
+        <nav>
+            <a class="navbar-brand" href="#">KL</a>
+            <ul class="navbar-nav">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="certificates.html">Certificates</a></li>
+                <li><a href="proyects.html">Proyects</a></li>
+                <li><a class="active" href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
     </header>
-<main class="contact-section">
-    <div class="contact-container">
-      <div class="contact-info">
-        <h1 class="section-title ">Contacto</h1>
-        <p>Aqui podras despejar todas tus dudas y consultas.</p>
-        <p>Email: <a href="mailto:info@misitio.com">info@misitio.com</a>
-        Tel: +54 01152745894</p>
-      </div>
-      <form class="contact-form">
-        <div class="form-group">
-          <input type="text"placeholder="Nombre">
-          <input type="text"placeholder="Apellido">
+    <main class="contact-section">
+        <div class="contact-container">
+            <div class="contact-info">
+                <h1 class="section-title ">Contacto</h1>
+                <p>Aqui podras despejar todas tus dudas y consultas.</p>
+                <p>Email: <a href="mailto:info@misitio.com">karen.lopedote@gmail.com</a>
+                Tel: +54 01152745894</p>
+            </div>
+            
+            <form class="contact-form">
+                <div class="form-group">
+                    <input type="text" placeholder="Nombre" required>
+                    <input type="text" placeholder="Apellido" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" placeholder="Email" required>
+                    <input type="tel" placeholder="Telefono">
+                </div>
+                <div class="form-group full">
+                    <textarea placeholder="Tu Mensaje" rows="5" required></textarea>
+                </div>
+                <button type="submit">Enviar</button>
+            </form>
         </div>
-        <div class="form-group">
-          <input type="email"placeholder="Email">
-          <input type="tel"placeholder="Telefono">
-        </div>
-        <div class="form-group full">
-          <textarea placeholder="Tu Mensaje"rows="5"></textarea>
-        </div>
-        <button type="submit">Enviar</button>
-      </form>
-    </div>
-  </main>
+    </main>
 
-<footer>
-    <div>© 2025 Karen Lopedote</div>
-    <div>Política de privacidad</div>
-  </footer>
+    <footer>
+        <div>© 2025 Karen Lopedote</div>
+        <div>Política de privacidad</div>
+    </footer>
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const contactForm = document.querySelector('.contact-form');
+
+        if (contactForm) {
+          contactForm.addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            Toastify({
+              text: "¡Mensaje enviado con éxito!",
+              duration: 3000,
+              gravity: "top",
+              position: "center",
+              stopOnFocus: true,
+              style: {
+                background: "#1E1E1E",
+                color: "#FFFFFF",
+                borderRadius: "8px",
+                border: "1px solid #B5A078"
+              }
+            }).showToast();
+            
+            contactForm.reset();
+          });
+        }
+      });
+    </script>
 </body>
 </html>
